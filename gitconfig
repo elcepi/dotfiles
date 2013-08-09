@@ -1,0 +1,24 @@
+[web]
+	browser = google-chrome
+[alias]
+	st = status
+	br = branch
+[color]
+	ui = true
+[colora "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+[colora "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[colora "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+[push]
+	default = matching
+ 

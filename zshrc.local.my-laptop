@@ -1,0 +1,7 @@
+alias o='xdg-open'
+
+# Fix the key binding of the history http://www.f30.me/2012/10/oh-my-zsh-key-bindings-on-ubuntu-12-10/
+
+bindkey "${terminfo[kcuu1]}" up-line-or-search
+bindkey "${terminfo[kcud1]}" down-line-or-search
+

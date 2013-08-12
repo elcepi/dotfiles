@@ -9,15 +9,21 @@ if [ ! -d ${HOME}/.oh-my-zsh ]; then
   git remote add upstream git://github.com/robbyrussell/oh-my-zsh.git
   git fetch origin
   git branch --set-upstream-to=origin/master master
+fi
+git pull origin master
+
+if [ ! -d ${HOME}/.dotfiles ]; then
+  git clone git@github.com:jose-espinosa/dotfiles.git ${HOME}/.dotfiles
+else
   git pull origin master
 fi
 
-git clone git@github.com:jose-espinosa/dotfiles.git ${HOME}/.dotfiles
-
-ln -s .dotfiles/gitconfig ${HOME}/.gitconfig
+if [ ! -f ${HOME}/.gitconfig ]; then
+  ln -s .dotfiles/gitconfig ${HOME}/.gitconfig
+fi
 
 # The zshrc config is machine dependent, we use the host name to get the rigth one
-if [ -f .dotfiles/zshrc.local.`hostname` ]; then
+if [ -f .dotfiles/zshrc.local.`hostname` ] && [ ! -f ${HOME}/.zshrc.local ]; then
   ln -s .dotfiles/zshrc.local.`hostname` ${HOME}/.zshrc.local
 fi
 

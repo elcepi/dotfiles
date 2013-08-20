@@ -172,3 +172,5 @@ au BufRead,BufNewFile *.py set shiftwidth=4 tabstop=4
 au BufRead,BufNewFile *.md set tw=80 lbr
 au BufRead,BufNewFile *.markdown set tw=80 lbr    
 
+ let g:Powerline_symbols = 'unicode'
+

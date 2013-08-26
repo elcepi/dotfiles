@@ -24,3 +24,5 @@
  
 [core]
 	editor = vim
+[user]
+	name = Jose Espinosa

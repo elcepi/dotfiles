@@ -1,4 +1,5 @@
 alias o='xdg-open'
+alias fix_dropbox='echo 100000 | sudo tee /proc/sys/fs/inotify/max_user_watches'
 
 # Fix the key binding of the history http://www.f30.me/2012/10/oh-my-zsh-key-bindings-on-ubuntu-12-10/
 

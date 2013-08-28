@@ -30,6 +30,10 @@ if [ ! -f ${HOME}/.gitconfig ]; then
   ln -s .dotfiles/gitconfig ${HOME}/.gitconfig
 fi
 
+if [ ! -f ${HOME}/.ackrc ]; then
+  ln -s .dotfiles/ackrc ${HOME}/.ackrc
+fi
+
 # The zshrc config is machine dependent, we use the host name to get the rigth one
 if [ -f .dotfiles/zshrc.local.`hostname` ] && [ ! -f ${HOME}/.zshrc.local ]; then
   ln -s .dotfiles/zshrc.local.`hostname` ${HOME}/.zshrc.local

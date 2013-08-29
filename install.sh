@@ -12,7 +12,7 @@ if [ ! -d ${HOME}/.oh-my-zsh ]; then
   git remote add origin git://github.com:jose-espinosa/oh-my-zsh.git
   git remote add upstream git://github.com/robbyrussell/oh-my-zsh.git
   git fetch origin
-  git branch --set-upstream-to=origin/master master
+  git branch --set-upstream master origin/master
   git pull origin master
   popd
 fi

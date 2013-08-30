@@ -9,7 +9,7 @@ if [ ! -d ${HOME}/.oh-my-zsh ]; then
   pushd
   cd ${HOME}/.oh-my-zsh
   git remote rm origin
-  git remote add origin git://github.com:jose-espinosa/oh-my-zsh.git
+  git remote add origin git://github.com/jose-espinosa/oh-my-zsh.git
   git remote add upstream git://github.com/robbyrussell/oh-my-zsh.git
   git fetch origin
   git branch --set-upstream master origin/master
@@ -18,7 +18,7 @@ if [ ! -d ${HOME}/.oh-my-zsh ]; then
 fi
 
 if [ ! -d ${HOME}/.dotfiles ]; then
-  git clone --recursive git://github.com:jose-espinosa/dotfiles.git ${HOME}/.dotfiles
+  git clone --recursive git://github.com/jose-espinosa/dotfiles.git ${HOME}/.dotfiles
   pushd
   cd ${HOME}/.dotfiles
   git pull origin master

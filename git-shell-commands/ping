@@ -1,0 +1,18 @@
+#!/bin/sh
+
+d=`readlink -f $1`
+
+if [ ! -w $d ]
+then
+	return 1
+fi
+
+# TODO: Determine if directory is under user path
+
+if "$(git --git-dir="$1" rev-parse --is-bare-repository)" = true
+then
+	return 0
+fi
+
+return 1
+

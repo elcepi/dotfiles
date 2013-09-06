@@ -1,4 +1,5 @@
 
 # Ignore log directiory
 --ignore-dir=log
+--ignore-dir=logs
 

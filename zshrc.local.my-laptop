@@ -9,3 +9,5 @@ alias pisummary='echo \{\"command\": \"summary\"\} | nc pi 4028'
 bindkey "${terminfo[kcuu1]}" up-line-or-search
 bindkey "${terminfo[kcud1]}" down-line-or-search
 
+alias ack=ack-grep
+

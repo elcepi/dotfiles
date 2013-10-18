@@ -11,3 +11,5 @@ bindkey "${terminfo[kcud1]}" down-line-or-search
 
 alias ack=ack-grep
 
+alias links='links -socks-proxy localhost:9050'
+

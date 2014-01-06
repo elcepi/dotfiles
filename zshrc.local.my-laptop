@@ -13,3 +13,5 @@ alias ack=ack-grep
 
 alias links='links -socks-proxy localhost:9050'
 
+alias srm='shred -zu'
+

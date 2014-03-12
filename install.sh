@@ -50,3 +50,7 @@ fi
 if [ ! -f ${HOME}/.gvimrc ]; then
   ln -s ${HOME}/.dotfiles/gvimrc ${HOME}/.gvimrc
 fi
+
+if [ ! -f ${HOME}/.rvmrc ]; then
+  ln -s ${HOME}/.dotfiles/rvmrc ${HOME}/.rvmrc
+fi

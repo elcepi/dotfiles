@@ -3,3 +3,7 @@
 --ignore-dir=log
 --ignore-dir=logs
 
+# Ignore temp directory
+--ignore-dir=tmp
+--ignore-dir=temp
+

@@ -7,3 +7,6 @@
 --ignore-dir=tmp
 --ignore-dir=temp
 
+#Ignore grable build directory
+--ignore-dir=build
+

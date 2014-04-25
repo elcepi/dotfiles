@@ -2,7 +2,6 @@
 	browser = google-chrome
 [alias]
 	st = status
-	br = branch
 [color]
 	ui = true
 [colora "branch"]

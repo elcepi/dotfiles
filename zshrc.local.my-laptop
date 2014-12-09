@@ -1,4 +1,4 @@
-alias o='xdg-open'
+alias o='/usr/bin/xdg-open'
 alias fix_dropbox='echo 100000 | sudo tee /proc/sys/fs/inotify/max_user_watches'
 
 alias compi='minicom -b 115200 -o -D /dev/ttyUSB0'

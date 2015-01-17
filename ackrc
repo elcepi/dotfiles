@@ -10,3 +10,10 @@
 #Ignore grable build directory
 --ignore-dir=build
 
+#Ignore android buil directory
+--ignore-dir=bin
+--ignore-dir=gen
+
+#Ignore idea files
+--ignore-dir=.idea
+

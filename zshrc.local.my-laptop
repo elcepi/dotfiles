@@ -15,3 +15,5 @@ alias links='links -socks-proxy localhost:9050'
 
 alias srm='shred -zu'
 
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+

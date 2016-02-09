@@ -2,7 +2,6 @@
 	browser = google-chrome
 [alias]
 	st = status
-	br = branch
 [color]
 	ui = true
 [colora "branch"]
@@ -26,3 +25,7 @@
 	editor = vim
 [user]
 	name = Jose Espinosa
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f

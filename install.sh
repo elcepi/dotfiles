@@ -9,10 +9,10 @@ if [ ! -d ${HOME}/.oh-my-zsh ]; then
   pushd
   cd ${HOME}/.oh-my-zsh
   git remote rm origin
-  git remote add origin git://github.com/jose-espinosa/oh-my-zsh.git
+  git remote add origin git@github.com:jose-espinosa/oh-my-zsh.git
   git remote add upstream git://github.com/robbyrussell/oh-my-zsh.git
   git fetch origin
-  git branch --set-upstream master origin/master
+  git branch --track master origin/master
   git pull origin master
   popd
 fi
@@ -50,3 +50,16 @@ fi
 if [ ! -f ${HOME}/.gvimrc ]; then
   ln -s ${HOME}/.dotfiles/gvimrc ${HOME}/.gvimrc
 fi
+
+if [ ! -f ${HOME}/.rvmrc ]; then
+  ln -s ${HOME}/.dotfiles/rvmrc ${HOME}/.rvmrc
+fi
+
+if [ ! -f ${HOME}/.mongorc.js ]; then
+  ln -s ${HOME}/.dotfiles/mongorc.js ${HOME}/.mongorc.js
+fi
+
+if [ ! -f ${HOME}/.rvmrc ]; then
+  ln -s ${HOME}/.dotfiles/rvmrc ${HOME}/.rvmrc
+fi
+

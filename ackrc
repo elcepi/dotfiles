@@ -3,3 +3,17 @@
 --ignore-dir=log
 --ignore-dir=logs
 
+# Ignore temp directory
+--ignore-dir=tmp
+--ignore-dir=temp
+
+#Ignore grable build directory
+--ignore-dir=build
+
+#Ignore android buil directory
+--ignore-dir=bin
+--ignore-dir=gen
+
+#Ignore idea files
+--ignore-dir=.idea
+

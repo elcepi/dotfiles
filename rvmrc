@@ -1,0 +1,3 @@
+#Automatic rvm updating
+
+rvm_autoupdate_flag=2

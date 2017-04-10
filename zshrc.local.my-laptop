@@ -1,5 +1,4 @@
 alias o='/usr/bin/xdg-open'
-alias fix_dropbox='echo 100000 | sudo tee /proc/sys/fs/inotify/max_user_watches'
 
 alias compi='minicom -b 115200 -o -D /dev/ttyUSB0'
 alias pisummary='echo \{\"command\": \"summary\"\} | nc pi 4028'
@@ -12,8 +11,6 @@ bindkey "${terminfo[kcud1]}" down-line-or-search
 alias ack=ack-grep
 
 alias links='links -socks-proxy localhost:9050'
-
-alias srm='shred -zu'
 
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 

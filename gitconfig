@@ -25,6 +25,7 @@
 	editor = vim
 [user]
 	name = Jose Espinosa
+	email = jhespinosa@gmail.com
 [filter "media"]
 	required = true
 	clean = git media clean %f

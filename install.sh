@@ -59,7 +59,3 @@ if [ ! -f ${HOME}/.mongorc.js ]; then
   ln -s ${HOME}/.dotfiles/mongorc.js ${HOME}/.mongorc.js
 fi
 
-if [ ! -f ${HOME}/.rvmrc ]; then
-  ln -s ${HOME}/.dotfiles/rvmrc ${HOME}/.rvmrc
-fi
-

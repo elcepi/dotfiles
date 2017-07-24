@@ -8,11 +8,5 @@ alias pisummary='echo \{\"command\": \"summary\"\} | nc pi 4028'
 bindkey "${terminfo[kcuu1]}" up-line-or-search
 bindkey "${terminfo[kcud1]}" down-line-or-search
 
-alias ack=ack-grep
-
-alias links='links -socks-proxy localhost:9050'
-
-alias srm='/usr/bin/srm -v'
-
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+alias lsrm='/usr/bin/srm -vl'
 

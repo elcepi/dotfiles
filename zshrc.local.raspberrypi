@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-alias ack=ack-grep
-
 uptime
 #let upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
 #let secs=$((${upSeconds}%60))

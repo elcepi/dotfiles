@@ -151,8 +151,7 @@ func! DeleteTrailingWS()
 endfunc
 
 " Automatically delete training white space on save
-autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
+autocmd BufWrite * :call DeleteTrailingWS()
 
 " Enable Ctrl+C and Ctrl+V for the clipboard
 map <C-V> "+gP

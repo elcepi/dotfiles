@@ -1,12 +1,12 @@
-alias o='/usr/bin/xdg-open'
-
-alias compi='minicom -b 115200 -o -D /dev/ttyUSB0'
-alias pisummary='echo \{\"command\": \"summary\"\} | nc pi 4028'
+alias compi='sudo minicom -b 115200 -o -D /dev/ttyUSB0'
 
 # Fix the key binding of the history http://www.f30.me/2012/10/oh-my-zsh-key-bindings-on-ubuntu-12-10/
-
 bindkey "${terminfo[kcuu1]}" up-line-or-search
 bindkey "${terminfo[kcud1]}" down-line-or-search
 
-alias lsrm='/usr/bin/srm -vl'
+o () {
+  for i in $@; do
+    /usr/bin/xdg-open $i
+  done
+}
 

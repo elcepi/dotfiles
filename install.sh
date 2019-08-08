@@ -16,16 +16,14 @@ if [ ! -d ${HOME}/.oh-my-zsh ]; then
   git fetch origin
   git branch --track master origin/master
   git pull origin master
-  popd
 fi
 
 if [ ! -d ${HOME}/.dotfiles ]; then
+  cd ${HOME}
   git clone --recursive git://github.com/jose-espinosa/dotfiles.git ${HOME}/.dotfiles
-  pushd
   cd ${HOME}/.dotfiles
   git pull origin master
   git submodule foreach git pull origin master
-  popd
 fi
 
 if [ ! -f ${HOME}/.gitconfig ]; then

@@ -10,8 +10,8 @@ if [ ! -d $https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools
   curl -L  | sh
   cd ${HOME}/.oh-my-zsh
   git remote rm origin
-  git remote add origin git@github.com:jose-espinosa/oh-my-zsh.git
-  git remote add upstream git://github.com/robbyrussell/oh-my-zsh.git
+  git remote add origin https://github.com/elcepi/oh-my-zsh
+  git remote add upstream https://github.com/robbyrussell/oh-my-zsh
   git fetch origin
   git branch --track master origin/master
   git pull origin master
@@ -19,7 +19,7 @@ fi
 
 if [ ! -d ${HOME}/.dotfiles ]; then
   cd ${HOME}
-  git clone --recursive git://github.com/jose-espinosa/dotfiles.git ${HOME}/.dotfiles
+  git clone --recursive http://github.com/jose-espinosa/dotfiles.git ${HOME}/.dotfiles
   cd ${HOME}/.dotfiles
   git pull origin master
   git submodule foreach git pull origin master

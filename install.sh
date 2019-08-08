@@ -6,9 +6,8 @@
 # http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
 # First we install oh-my-zshell if not available
-if [ ! -d ${HOME}/.oh-my-zsh ]; then
-  curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-  pushd
+if [ ! -d $https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh{HOME}/.oh-my-zsh ]; then
+  curl -L  | sh
   cd ${HOME}/.oh-my-zsh
   git remote rm origin
   git remote add origin git@github.com:jose-espinosa/oh-my-zsh.git

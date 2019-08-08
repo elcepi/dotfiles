@@ -1,5 +1,7 @@
 #!/bin/sh -x
 
+SHELL := /bin/bash
+
 # Vim plugin ideas are borrow from here
 # http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 

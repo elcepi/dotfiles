@@ -10,3 +10,4 @@ o () {
   done
 }
 
+alias kgm="kill -KILL `ps aux | grep google-musicmanager | head -1 | cut -d' ' -f 7`"

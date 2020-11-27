@@ -1,12 +1,8 @@
 alias compi='sudo minicom -b 115200 -o -D /dev/ttyUSB0'
+alias redirect='curl -Ls -o /dev/null -w %{url_effective}'
 
 o () {
   for i in $@; do
     /usr/bin/xdg-open $i
   done
-}
-
-kgm () {
-  tpid=$(pgrep -f google-musicmanager | head -1)
-  kill $@ ${tpid}
 }

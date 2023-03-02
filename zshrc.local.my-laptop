@@ -1,4 +1,4 @@
-alias compi='sudo minicom -b 200 -o -D /dev/ttyUSB0'
+alias compi='sudo minicom -b 115200 -o -D /dev/ttyUSB0'
 alias redirect='curl -Ls -o /dev/null -w %{url_effective}'
 
 o () {
@@ -6,6 +6,3 @@ o () {
     /usr/bin/xdg-open $i
   done
 }
-
-#umask 022
-

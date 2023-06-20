@@ -1,14 +1,14 @@
-alias lsrm='srm -lvr'
 
-HISTSIZE=1000000
-
-function _ignore_lsrm() {
+function _ignore_commands() {
   ## uncomment if HISTORY_IGNORE
   ## should use EXTENDED_GLOB syntax
   # setopt extendedglob
-  if [[ $1 ==  lsrm* ]]; then
-    return 1;
-  fi
+  for i in $ignore_commands
+  do
+    if [[ $1 ==  $i* ]]; then
+      return 1;
+    fi
+  done
 }
 
-add-zsh-hook zshaddhistory _ignore_lsrm
+add-zsh-hook zshaddhistory _ignore_commands

@@ -1,8 +1,16 @@
-alias compi='sudo minicom -b 115200 -o -D /dev/ttyUSB0'
-alias redirect='curl -Ls -o /dev/null -w %{url_effective}'
+alias compi='minicom -b 115200 -o -D /dev/ttyUSB0'
+export GPODDER_DOWNLOAD_DIR=${HOME}/Documents/Podcast
 
-o () {
-  for i in $@; do
-    /usr/bin/xdg-open $i
-  done
-}
+HISTSIZE=1000000
+alias lsrm='srm -lvr'
+ignore_commands=(lsrm ignore-.backup)
+
+plugins=(
+  aliases
+  common-aliases
+  git
+  history
+  hitchhiker
+  )
+
+ZSH_CUSTOM=/home/jose/.dotfiles/custom

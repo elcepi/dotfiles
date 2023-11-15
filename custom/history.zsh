@@ -5,7 +5,7 @@ function _ignore_commands() {
   # setopt extendedglob
   for i in $ignore_commands
   do
-    if [[ $1 ==  $i* ]]; then
+    if [[ $1 ==  *$i* ]]; then
       return 1;
     fi
   done

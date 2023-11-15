@@ -1,0 +1,17 @@
+Host ml
+  Hostname alumni.media.mit.edu
+  User jhe
+
+Host mlb
+  Hostname alumni.media.mit.edu
+  User jhe
+  DynamicForward 8080
+  Compression yes
+
+Host pi
+  Hostname pi
+  User jose
+
+Host pi6
+   Hostname 2601:645:8300:8cce:ccb2:dc02:edcb:873d
+   User pi

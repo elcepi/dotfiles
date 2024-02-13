@@ -1,8 +1,7 @@
 alias compi='minicom -b 115200 -o -D /dev/ttyUSB0'
-export GPODDER_DOWNLOAD_DIR=${HOME}/Documents/Podcast
+alias lsrm='srm -lvr'
 
 HISTSIZE=1000000
-alias lsrm='srm -lvr'
 ignore_commands=(lsrm ignore-.backup)
 
 plugins=(

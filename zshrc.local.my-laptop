@@ -13,3 +13,8 @@ plugins=(
   )
 
 ZSH_CUSTOM=/home/jose/.dotfiles/custom
+
+for i in `ls $ZSH_CUSTOM/*`; do
+  source $i
+done
+

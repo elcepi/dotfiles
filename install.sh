@@ -5,17 +5,8 @@
 # Vim plugin ideas are borrow from here
 # http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
-# First we install oh-my-zshell if not available
-if [ ! -d $https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh{HOME}/.oh-my-zsh ]; then
-  curl -L  | sh
-  cd ${HOME}/.oh-my-zsh
-  git remote rm origin
-  git remote add origin https://github.com/elcepi/oh-my-zsh
-  git remote add upstream https://github.com/robbyrussell/oh-my-zsh
-  git fetch origin
-  git branch --track master origin/master
-  git pull origin master
-fi
+# First we install oh-my-zshell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 if [ ! -d ${HOME}/.dotfiles ]; then
   cd ${HOME}

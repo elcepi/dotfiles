@@ -6,7 +6,7 @@
 # http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
 # First we install oh-my-zshell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" "--unattended"
 
 if [ ! -d ${HOME}/.dotfiles ]; then
   cd ${HOME}

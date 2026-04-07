@@ -174,6 +174,6 @@ au BufRead,BufNewFile *.markdown set tw=80 lbr
 
 let g:Powerline_symbols = 'unicode'
 
-if ${HOSTNAME} == "pi"
+if $HOSTNAME == "pi"
     colorscheme morning
 endif

@@ -1,14 +1,17 @@
 
 function _ignore_commands() {
-  ## uncomment if HISTORY_IGNORE
-  ## should use EXTENDED_GLOB syntax
-  # setopt extendedglob
-  for i in $ignore_commands
-  do
-    if [[ $1 ==  *$i* ]]; then
-      return 1;
-    fi
+  for i in $ignore_commands; do
+    for word in "${(s: :)@}"; do
+      if [[ "${word}" != "-"* ]]; then
+        if realpath --quiet --canonicalize-missing "$word" | grep --quiet "${i}" ; then
+          return 1
+        fi
+      fi
+    done
   done
 }
 
-add-zsh-hook zshaddhistory _ignore_commands
+if typeset -f add-zsh-hook > /dev/null; then
+  add-zsh-hook zshaddhistory _ignore_commands
+fi
+

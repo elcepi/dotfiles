@@ -2,6 +2,7 @@ zstyle ':omz:update' mode auto
 
 alias compi='minicom -b 115200 -o -D /dev/ttyUSB0'
 alias lsrm='srm -lvr'
+alias kill_beeper='kill $(ps aux | grep beeper | tr -s " " | cut -d " " -f 2 )'
 
 HISTSIZE=1000000
 ignore_commands=(lsrm ignore-.backup)
@@ -17,7 +18,7 @@ alias rm='echo "This is not the command you are looking for."; false'
 
 ZSH_CUSTOM=/home/jose/.dotfiles/custom
 
-for i in `ls $ZSH_CUSTOM/*`; do
-  source $i
-done
+#for i in `ls $ZSH_CUSTOM/*`; do
+#  source $i
+#done
 

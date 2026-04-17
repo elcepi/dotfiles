@@ -1,51 +1,31 @@
-#!/bin/sh -x
-
-#SHELL := /bin/bash
+#!/bin/bash -x
 
 # Vim plugin ideas are borrow from here
 # http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
 # First we install oh-my-zshell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" "--unattended"
+if [ ! -d ${HOME}"/.oh-my-zsh"]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" "--unattended"
+fi
+#
 
-if [ ! -d ${HOME}/.dotfiles ]; then
-  cd ${HOME}
-  git clone --recursive http://github.com/jose-espinosa/dotfiles.git ${HOME}/.dotfiles
-  cd ${HOME}/.dotfiles
+WORK=${HOME}"\.dotfiles"
+if [ ! -d ${WORK} ]; then
+  git clone --recursive http://github.com/jose-espinosa/dotfiles.git ${WORK}
+  cd ${WORK}
   git pull origin master
   git submodule foreach git pull origin master
 fi
 
-if [ ! -f ${HOME}/.gitconfig ]; then
-  ln -s ${HOME}/.dotfiles/gitconfig ${HOME}/.gitconfig
-fi
+## declare an array variable
+declare -a FILES=("abcde.conf" "ackrc" "gitconfig" "zshrc.local" "vim" "vimrc" "gvimrc" "rvmrc" "mongorc.js")
 
-if [ ! -f ${HOME}/.ackrc ]; then
-  ln -s ${HOME}/.dotfiles/ackrc ${HOME}/.ackrc
-fi
-
-# The zshrc config is machine dependent, we use the host name to get the rigth one
-if [ -f ${HOME}/.dotfiles/zshrc.local.`hostname` ] && [ ! -f ${HOME}/.zshrc.local ]; then
-  ln -s ${HOME}/.dotfiles/zshrc.local.`hostname` ${HOME}/.zshrc.local
-fi
-
-if [ ! -d ${HOME}/.vim ]; then
-  ln -s ${HOME}/.dotfiles/vim ${HOME}/.vim
-fi
-
-if [ ! -f ${HOME}/.vimrc ]; then
-  ln -s ${HOME}/.dotfiles/vimrc ${HOME}/.vimrc
-fi
-
-if [ ! -f ${HOME}/.gvimrc ]; then
-  ln -s ${HOME}/.dotfiles/gvimrc ${HOME}/.gvimrc
-fi
-
-if [ ! -f ${HOME}/.rvmrc ]; then
-  ln -s ${HOME}/.dotfiles/rvmrc ${HOME}/.rvmrc
-fi
-
-if [ ! -f ${HOME}/.mongorc.js ]; then
-  ln -s ${HOME}/.dotfiles/mongorc.js ${HOME}/.mongorc.js
-fi
-
+## loop through above array (quotes are important if your elements may contain spaces)
+for f in "${FILES[@]}"
+do
+  if [ -e "${WORK}""${f}""."`hostname` ]; then
+    ln -s "${WORK}${f}".`hostname` "${HOME}/"".""${f}"
+  else
+    ln -s "${WORK}${f}" "${HOME}/"".""${f}"
+  fi
+done

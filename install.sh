@@ -10,7 +10,7 @@ fi
 # http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 WORK=${HOME}"/.dotfiles/"
 if [ ! -d ${WORK} ]; then
-  git clone --recursive http://github.com/jose-espinosa/dotfiles.git ${WORK}
+  git clone --recursive git@github.com:jose-espinosa/dotfiles.git ${WORK}
   cd ${WORK}
   git pull origin master
   git submodule foreach git pull origin master

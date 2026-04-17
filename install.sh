@@ -9,7 +9,7 @@ if [ ! -d ${HOME}"/.oh-my-zsh"]; then
 fi
 #
 
-WORK=${HOME}"\.dotfiles"
+WORK=${HOME}"/.dotfiles/"
 if [ ! -d ${WORK} ]; then
   git clone --recursive http://github.com/jose-espinosa/dotfiles.git ${WORK}
   cd ${WORK}
@@ -18,7 +18,7 @@ if [ ! -d ${WORK} ]; then
 fi
 
 ## declare an array variable
-declare -a FILES=("abcde.conf" "ackrc" "gitconfig" "zshrc.local" "vim" "vimrc" "gvimrc" "rvmrc" "mongorc.js")
+declare -a FILES=("abcde.conf" "ackrc" "gitconfig" "zshrc.local" "vim" "vimrc" "gvimrc" "rvmrc" "mongorc.js" "selected_editor")
 
 ## loop through above array (quotes are important if your elements may contain spaces)
 for f in "${FILES[@]}"

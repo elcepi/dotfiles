@@ -1,5 +1,8 @@
 zstyle ':omz:update' mode auto
 
+unsetopt share_history
+setopt hist_ignore_all_dups
+
 alias compi='minicom -b 115200 -o -D /dev/ttyUSB0'
 alias lsrm='srm -lvr'
 alias kill_beeper='kill $(ps aux | grep beeper | tr -s " " | cut -d " " -f 2 )'

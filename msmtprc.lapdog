@@ -1,6 +1,4 @@
 # A system wide configuration file is optional.
-# If it exists, it usually defines a default account.
-# This allows msmtp to be used like /usr/sbin/sendmail.
 account default
 
 # The place where the mail goes. The actual machine name is required
@@ -10,10 +8,10 @@ host smtp.gmail.com
 port 587
 
 # Construct envelope-from addresses of the form "user@oursite.example".
-# auto_from on
-# maildomain itix.fr
 auto_from off
-from jhespinosa@gmail.com
+allow_from_override off
+set_from_header on
+from jhespinosa+cron@gmail.com
 
 # Dispatch mails according to /etc/aliases
 aliases /etc/aliases
@@ -23,26 +21,13 @@ tls on
 tls_starttls on
 tls_trust_file /etc/ssl/certs/ca-certificates.crt
 
-# Syslog logging with facility LOG_MAIL instead of the default LOG_USER.
-syslog LOG_MAIL
 
 # Authenticate to GMail
 #
-# If your Gmail account is secured with two-factor authentication, you need
-# to generate a unique App Password to use in ssmtp.conf.
-# See https://support.google.com/mail/answer/185833
+# 2fa needs to be enaded
 # App Passwords can be generated on https://myaccount.google.com/apppasswords
-#
-# Use you Gmail username (not the App Name) in the AuthUser line and use the
-# generated 16-character password in the AuthPass line, spaces in the password
-# can be omitted.
-#
-# If you do not use two-factor authentication, you need to allow access to
-# unsecure apps. You can do so on your Less Secure Apps page.
-# See https://support.google.com/accounts/answer/6010255
-# You can do so on https://myaccount.google.com/lesssecureapps
 
 auth on
 user jhespinosa@gmail.com
-password ibeiykxkqtaytbvl
-
+#passwordeval  /usr/bin/secret-tool lookup  mail gmail #secre-tool needs a GUI
+passwordeval /usr/bin/cat /home/jose/.msmtprc-password

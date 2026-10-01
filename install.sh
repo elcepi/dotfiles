@@ -1,5 +1,12 @@
 #!/bin/bash
 
+function link_config_file()
+{  if [ -e "${1}""."`hostname` ]; then
+    ln -s "${1}".`hostname` "${2}"
+  elif [ -e "${1}" ]; then
+    ln -s "${1}" "${2}"
+  fi
+}
 
 # First we install oh-my-zsh
 if [ ! -d "${HOME}""/.oh-my-zsh"  ]; then
@@ -22,9 +29,9 @@ declare -a FILES=("abcde.conf" "ackrc" "gitconfig" "zshrc.local" "vim" "vimrc" "
 # loop through above array (quotes are important if your elements may contain spaces)
 for f in "${FILES[@]}"
 do
-  if [ -e "${WORK}""${f}""."`hostname` ]; then
-    ln -s "${WORK}${f}".`hostname` "${HOME}/"".""${f}"
-  elif [ -e "${WORK}""${f}" ]; then
-    ln -s "${WORK}${f}" "${HOME}/"".""${f}"
-  fi
+  link_config_file "${WORK}${f}" "${HOME}/"".""${f}"
 done
+
+#Install file not in ${HOME}
+mkdir -p .shh
+link_config_file "${WORK}""ssh_config" "${HOME}/"".""ssh/config"

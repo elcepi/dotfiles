@@ -24,7 +24,7 @@ for f in "${FILES[@]}"
 do
   if [ -e "${WORK}""${f}""."`hostname` ]; then
     ln -s "${WORK}${f}".`hostname` "${HOME}/"".""${f}"
-  else
+  elif [ -e "${WORK}""${f}" ]; then
     ln -s "${WORK}${f}" "${HOME}/"".""${f}"
   fi
 done

@@ -9,9 +9,5 @@ Host mlb
   Compression yes
 
 Host pi
-  Hostname pi
-  User jose
+  User pi
 
-Host pi6
-   Hostname 2601:645:8300:8cce:ccb2:dc02:edcb:873d
-   User pi

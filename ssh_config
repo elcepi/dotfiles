@@ -9,5 +9,6 @@ Host mlb
   Compression yes
 
 Host pi
+  Hostname pi.local
   User pi
 

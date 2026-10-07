@@ -1,0 +1,1 @@
+alias lsrm='srm -lvr'

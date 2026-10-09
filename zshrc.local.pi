@@ -1,6 +1,3 @@
-#!/bin/zsh
+ZSH_THEME="minimal"
 
 uptime
-
-ZSH_THEME="minimal"
-PROMPT="${FG[005]}$PROMPT$reset_color"

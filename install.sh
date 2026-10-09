@@ -24,7 +24,7 @@ if [ ! -d ${WORK} ]; then
 fi
 
 ## declare an array variable
-declare -a FILES=("abcde.conf" "ackrc" "gitconfig" "zshrc.local" "vim" "vimrc" "gvimrc" "rvmrc" "mongorc.js" "selected_editor" "msmtprc")
+declare -a FILES=("abcde.conf" "ackrc" "gitconfig" "zshrc.local.pre" "zshrc.local.post" "vim" "vimrc" "gvimrc" "rvmrc" "mongorc.js" "selected_editor" "msmtprc")
 
 # loop through above array (quotes are important if your elements may contain spaces)
 for f in "${FILES[@]}"

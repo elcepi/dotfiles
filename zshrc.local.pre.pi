@@ -1,0 +1,22 @@
+zstyle ':omz:update' mode auto
+
+unsetopt share_history
+setopt hist_ignore_all_dups
+
+alias rm='echo "This is not the command you are looking for."; false'
+
+ZSH_CUSTOM=${HOME}/.dotfiles/custom
+alias lsrm='srm -lvr'
+
+HISTSIZE=1000000
+ignore_commands=(lsrm ignore-.backup)
+
+plugins=(
+  aliases
+  common-aliases
+  history
+  )
+
+ZSH_THEME="robbyrussell"
+
+

@@ -1,3 +1,5 @@
+[alias]
+	st = status
 [color]
 	ui = true
 [colora "branch"]

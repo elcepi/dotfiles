@@ -17,6 +17,6 @@ plugins=(
   history
   )
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="minimal"
 
 

@@ -13,7 +13,6 @@ plugins=(
   aliases
   common-aliases
   history
-  ps_grep
   )
 
 ZSH_THEME="robbyrussell"

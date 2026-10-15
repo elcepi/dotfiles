@@ -8,7 +8,6 @@ Host mlb
   DynamicForward 8080
   Compression yes
 
-Host pi
-  Hostname pi.local
+Host pi.local
   User pi
 

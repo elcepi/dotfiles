@@ -6,7 +6,7 @@ setopt hist_ignore_all_dups
 ZSH_CUSTOM=${HOME}/.dotfiles/custom
 
 HISTSIZE=1000000
-ignore_commands=(lsrm ignore-.backup)
+ignore_commands=(lsrm lshrea ignore-.backup)
 
 plugins=(
   aliases

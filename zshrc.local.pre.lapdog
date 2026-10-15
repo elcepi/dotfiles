@@ -7,7 +7,7 @@ ZSH_CUSTOM=${HOME}/.dotfiles/custom
 alias lsrm='srm -lvr'
 
 HISTSIZE=1000000
-ignore_commands=(lsrm ignore-.backup)
+ignore_commands=(lsrm lshrea ignore-.backup)
 
 plugins=(
   aliases

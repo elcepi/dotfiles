@@ -16,4 +16,5 @@ plugins=(
 
 ZSH_THEME="minimal"
 
+alias test_boink=sudo boinccmd --get_tasks; sudo boinccmd --get_state
 

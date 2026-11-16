@@ -33,5 +33,5 @@ do
 done
 
 #Install file not in ${HOME}
-mkdir -p .shh
+mkdir -p ${HOME}.ssh
 link_config_file "${WORK}""ssh_config" "${HOME}/"".""ssh/config"
